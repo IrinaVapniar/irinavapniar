@@ -67,7 +67,7 @@ p {
     padding: 75px 5px 5px 5px;
     align-items: center;
     width: auto;
-
+    padding-bottom: 20px;
 }
 
 .nameHeadLine {
@@ -211,6 +211,7 @@ p {
 
 .tegs {
     font-size: 15px;
+    margin: 0px 0px 20px 0px;
 }
 
 .footerImage {
@@ -220,7 +221,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 20px 6px 10px 6px;
+    margin: 0px 3px 0px 3px;
 }
 
 .footerImage:hover {
