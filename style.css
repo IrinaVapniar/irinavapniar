@@ -20,6 +20,7 @@ body {
     background: linear-gradient(135deg, #A78FDC 0%, #A78FDC 30%, #fff3ff 100%) fixed;
     font-family: Proxima Nova;
     font-weight: 100;
+    margin: 0;
 }
 
 div {
@@ -35,6 +36,13 @@ p {
     justify-content: center;
 }
 
+.mainContainerPortfolio {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: white;
+}
+
 .wrap {
     flex-direction: column;
     width: 100%;
@@ -45,9 +53,22 @@ p {
     z-index: 0;
     width: auto;
     justify-content: center;
-    margin-bottom: -60px;
+    margin: 10px 0px -60px 0px;
     min-width: 120px;
+}
 
+.headerPortfolio {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    min-width: 120px;
+    height: 100px;
+    align-items: center;
+    background: linear-gradient(#A78FDC 0%, #fff3ff);
+    box-shadow: 0px 3px 5px #e4dafb;
+    padding: 8px 0px 5px 0px;
+    position: fixed;
+    flex-wrap: wrap;
 }
 
 .mainImage {
@@ -58,6 +79,19 @@ p {
     border: 3px solid white;
     background-image: url("./Images/Ava.jpg");
     background-size: cover;
+}
+
+.mainImagePortfolio {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px grey;
+    border: 3px solid white;
+}
+
+.mainImagePortfolioContainer {
+    justify-content: center;
+    width: 100%;
 }
 
 .bodyContainer {
@@ -81,6 +115,14 @@ p {
 
 }
 
+.nameHeadLinePortfolio {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 8px;
+    align-self: center;
+}
+
 .professionHeadLine {
     font-size: 16px;
     font-weight: 300;
@@ -97,14 +139,15 @@ p {
     height: 40px;
     background-color: #A78FDC;
     border: none;
+    text-decoration: none;
     font-size: 17px;
     color: white;
-    align-self: center;
     border-radius: 5px;
     box-shadow: 0px 3px 5px grey;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    transition: background 1s ease;
 }
 
 .contactButton::before {
@@ -117,28 +160,12 @@ p {
     margin-right: 10px;
 }
 
-.contactButtonLink {
-    display: flex;
-    width: 100%;
-    min-width: 170px;
-    max-width: 400px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    align-self: center;
-    border-radius: 5px;
-
-    justify-content: center;
-    align-items: center;
-
-}
-
 .contactButtonLink:link {
     text-decoration: none;
 }
 
 .contactButton:hover {
-    background-color: #b99ff4;
+    background-color: #c7b4f5;
     cursor: pointer;
 }
 
@@ -156,31 +183,38 @@ p {
     line-height: 1.4;
 }
 
-.phoneNumber:link {
+.phoneNumber {
     color: #5c4e76;
     text-decoration: none;
+    transition: all 1s ease;
 }
 
 .phoneNumber:hover {
-    font-weight: 300;
+    text-shadow: 2px 2px 2px #c7b4f5;
 }
 
 .prtfolioPhotos {
     width: 100%;
-    height: auto;
-    max-width: 440px;
+    max-width: 430px;
     display: flex;
-    justify-content: center;
-    margin: 5px;
-}
-
-.prtfolioPhotos:hover {
-    background-color: white;
-    opacity: 90%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
 
 .portfolioLink {
+    display: flex;
     margin: 20px 0px 20px 0px;
+    width: 100%;
+    max-width: 430px;
+    transition: all 1s ease;
+
+}
+
+.portfolioLink:hover {
+    background-color: white;
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .protfolioImage {
@@ -188,8 +222,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     width: 20%;
-    max-height: 80px;
-    min-height: 60px;
+    min-height: 80px;
     height: 100%;
     border-radius: 2px;
     box-shadow: 1px 1px 3px grey;
@@ -222,9 +255,66 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     margin: 0px 3px 0px 3px;
+    transition: all 1s ease;
 }
 
 .footerImage:hover {
-    background-color: white;
-    opacity: 80%;
+    transform: translateY(-5px);
+}
+
+.footerImagesPortfolio {
+    align-self: flex-start;
+}
+
+
+.footerImagePortfolio {
+    width: 30px;
+    height: 30px;
+    list-style-type: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 3px 0px 3px;
+    transition: all 1s ease;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.footerImagePortfolio:hover {
+    transform: translateY(-5px);
+}
+
+.containerPortfolio {
+    margin-top: 113px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bodyPortfolio {
+    padding: 15px;
+}
+
+.portfolioPhotos {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+}
+
+.closeButton {
+    position: fixed;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+    background-image: url('./Images/icons-close.png');
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 1s ease;
+}
+
+.closeButton:hover {
+    transform: rotate(90deg);
 }
