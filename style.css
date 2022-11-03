@@ -287,12 +287,14 @@ p {
 
 .containerPortfolio {
     margin-top: 113px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
+    flex-direction: column;
 }
 
 .bodyPortfolio {
     padding: 15px;
+    justify-content: center;
 }
 
 .portfolioPhotos {
